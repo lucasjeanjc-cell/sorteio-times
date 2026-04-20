@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -11,17 +15,14 @@ body {
 }
 
 .logo {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
+  width: 200px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .container {
   max-width: 900px;
   margin: auto;
-  padding: 20px;
+  padding: 15px;
 }
 
 h1 {
@@ -35,21 +36,16 @@ h1 {
   margin-bottom: 15px;
 }
 
-input, select {
+input, select, button {
   width: 100%;
   padding: 10px;
   margin-top: 8px;
   border-radius: 8px;
   border: none;
-  outline: none;
+  font-size: 16px;
 }
 
 button {
-  margin-top: 10px;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  border-radius: 8px;
   background: #22c55e;
   color: white;
   font-weight: bold;
@@ -78,11 +74,24 @@ li {
   border-bottom: 1px solid #334155;
 }
 
+.remover {
+  background: #ef4444;
+  margin-left: 10px;
+  padding: 5px 8px;
+  width: auto;
+}
+
 .times {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
   margin-top: 20px;
+}
+
+@media (min-width: 700px) {
+  .times {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .time-card {
@@ -91,92 +100,7 @@ li {
   border-radius: 12px;
 }
 
-.time-card h3 {
-  margin-top: 0;
-  color: #38bdf8;
-}
-
-
-.time-0 {
-  border-left: 6px solid #ef4444;
-}
-
-.time-1 {
-  border-left: 6px solid #3b82f6;
-}
-
-.time-2 {
-  border-left: 6px solid #22c55e;
-}
-
-.time-3 {
-  border-left: 6px solid #eab308;
-}
-
-/* nome do time colorido */
-.time-0 .time-name { color: #ef4444; }
-.time-1 .time-name { color: #3b82f6; }
-.time-2 .time-name { color: #22c55e; }
-.time-3 .time-name { color: #eab308; }
-
 .time-name {
-  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-}
-
-.remover {
-  background: #ef4444;
-  margin-left: 10px;
-  padding: 5px 8px;
-  width: auto;
-}
-
-.remover:hover {
-  background: #dc2626;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 10px;
-}
-
-/* INPUTS E BOTÕES AJUSTADOS */
-input, select, button {
-  width: 100%;
-  font-size: 16px;
-}
-
-/* TIMES EM COLUNA NO CELULAR */
-.times {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-
-/* EM TELAS MAIORES (PC) */
-@media (min-width: 700px) {
-  .times {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* MELHORAR CARD NO CELULAR */
-.time-card {
-  padding: 12px;
-  border-radius: 10px;
-}
-
-input, button, select {
-  font-size: 16px;
 }
